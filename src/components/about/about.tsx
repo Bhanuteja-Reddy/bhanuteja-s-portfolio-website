@@ -5,6 +5,10 @@ import './about.css';
 const { Text, Title } = Typography;
 const { Meta } = Card;
 const About = () => {
+
+    const openResumeInNewTab = () => {
+        window.open('https://docs.google.com/document/d/1-tMJaoQgWWbhp44I9919VDcpI4cYMj-IO7bYLwz5Leg/edit', "_blank");
+    }
     return (
         <Card>
             <Row>
@@ -13,7 +17,7 @@ const About = () => {
                         cover={
                             <Image
                                 width={200}
-                                src="https://media-exp1.licdn.com/dms/image/C5603AQHEPW-0AX0LXA/profile-displayphoto-shrink_400_400/0?e=1606953600&amp;v=beta&amp;t=f4HF4AWtxPcjrkotf8JctsePVGHYPxfy1_UKAs6w-oY"
+                                src="bhanu_teja_reddy_profile_pic.jpg"
                                 alt='Bhanuteja Reddy'
                             />}
                     >
@@ -31,7 +35,7 @@ const About = () => {
                     I have {new Date().getFullYear() - 2018}+ years of experience of building and maintaining Websites, Mobile Applications.I love Javascript, Node, React, Redux, Html, CSS, Bootstrap.
                     </Text>
                     <br /><br />
-                    <Button shape='round'>View Resume</Button>
+                    <Button shape='round' onClick={openResumeInNewTab}>View Resume</Button>
                 </Col>
             </Row>
         </Card>
